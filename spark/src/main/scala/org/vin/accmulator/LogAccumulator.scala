@@ -7,7 +7,7 @@ import scala.collection.mutable
 class LogAccumulator extends AccumulatorV2[String, mutable.HashMap [String, Long]{
 
  {
-  override def isZero: Boolean = ???
+  override def isZero: Boolean = tre
 
   override def copy(): AccumulatorV2[String, mutable.HashMap[String, Long]] = ???
 
