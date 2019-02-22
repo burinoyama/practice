@@ -16,15 +16,13 @@ public class DoubleStackDijkstra {
 		}
 		Stack<String> ops = new Stack();
 		Stack<Double> vals = new Stack();
-		String[] commands = command.split(" ");
-		for (String com : commands) {
-//			com = com.trim();
-			// TODO com.trim()不能去掉" ("中的空格。很是奇怪，🐎的
-			com = com.replaceAll(" ", "");
+		for (int i = 0; i < command.length(); i++) {
+			String com = String.valueOf(command.charAt(i));
+
 			if ("+".equals(com) || "-".equals(com) || "*".equals(com) || "/".equals(com)) {
 				ops.push(com);
 
-			} else if (")".equals(com)) {
+			} else if (")".trim().equals(com)) {
 				String op = ops.pop();
 				Double v = vals.pop();
 				if ("+".equals(op)) {
