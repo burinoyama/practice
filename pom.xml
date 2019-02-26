@@ -12,6 +12,8 @@
         <module>spark</module>
         <module>script</module>
         <module>argorithm</module>
+        <module>zookeeper</module>
+        <module>kafka</module>
     </modules>
     <properties>
         <spark.version>2.1.1</spark.version>

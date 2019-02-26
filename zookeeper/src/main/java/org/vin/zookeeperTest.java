@@ -1,6 +1,7 @@
 package org.vin;
 
 import org.apache.zookeeper.*;
+import org.apache.zookeeper.data.Stat;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,6 +16,12 @@ public class zookeeperTest {
 	public void create() throws KeeperException, InterruptedException {
 		String msg = zkClient.create("/obstruct", "obfuscate".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 		System.err.println(msg);
+	}
+
+	@Test
+	public void exist() throws KeeperException, InterruptedException {
+		Stat exists = zkClient.exists("/obstruct", false);
+		System.err.println(exists);
 	}
 
 	@Before
