@@ -5,7 +5,14 @@ import org.junit.Test;
 public class SortPlayGround {
 
 	Integer[] a = {2, 3, 6, 1, 4, 7, 8};
+	Integer[] forMerge = {1, 3, 5, 2, 4, 8};
 
+
+	@Test
+	public void runMerge() {
+		Merge merge = new Merge();
+		merge.show(merge.sort(forMerge));
+	}
 
 	@Test
 	public void runShell() {
