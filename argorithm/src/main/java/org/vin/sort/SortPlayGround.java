@@ -8,6 +8,13 @@ public class SortPlayGround {
 	Integer[] b = {-1, 3, 6, 1, 4, 7, 8};
 	Integer[] forPartialMerge = {1, 3, 5, 2, 4, 8};
 
+
+	@Test
+	public void runTripleQuick() {
+		TripleQuick quick = new TripleQuick();
+		quick.show(quick.sort(a));
+	}
+
 	@Test
 	public void runQucik() {
 		Quick quick = new Quick();
