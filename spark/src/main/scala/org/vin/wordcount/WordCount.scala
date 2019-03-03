@@ -19,13 +19,14 @@ object WordCount {
   }
 
   def wordCount1(words: RDD[String]): Unit = {
-    val ret = words.map((_, 1)).reduceByKey(_+_).collect()
+    val ret = words.map(_.split(" ")).map((_, 1)).groupByKey()
 
     println(ret)
   }
 
+  //TODO 如何将key value 对换位置？
   def wordCount2(words:RDD[String]): Unit = {
-
+    words.flatMap(_.split("\n")).map((_, 1)).reduceByKey(_+_).map((k:String,v:Int)=>{(v,k)}).collect()
   }
 
 
