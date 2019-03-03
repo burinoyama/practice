@@ -47,7 +47,7 @@ public class CopyLocalToHDFS {
 		IOUtils.copyBytes(bis, out, 4096, true);
 
 
-		fis = fileSystem.open(new Path(URI.create(dst)));
+//		fis = fileSystem.open(new Path(URI.create(dst)));
 
 		InputStream wrappedStream = fis.getWrappedStream();
 	}
