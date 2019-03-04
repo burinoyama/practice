@@ -7,10 +7,11 @@ import java.util.Objects;
 /**
  * first arg is the path of where the MAVEN is
  * second arg is the flag wether scan all the file system to remove all incompleted package
+ * my maven repository is /Users/admin/Maven/repository
  */
 public class RemoveFragmentaryPac {
 
-	private static final String suffix = ".lastUpdated";
+	private static final String SUFFIX = ".lastUpdated";
 	private static int pathCounter = 0;
 	private static int fileCounter = 0;
 	private static int deleteFiles = 0;
@@ -49,7 +50,7 @@ public class RemoveFragmentaryPac {
 			}
 			if (subFile.isFile()) {
 				fileCounter++;
-				if (subFile.getName().endsWith(suffix)) {
+				if (subFile.getName().endsWith(SUFFIX)) {
 					print("delete fragmentary file ---> " + subFile.getName());
 					subFile.delete();
 					deleteFiles++;
