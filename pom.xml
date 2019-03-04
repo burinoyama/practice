@@ -14,6 +14,7 @@
         <module>argorithm</module>
         <module>zookeeper</module>
         <module>kafka</module>
+        <module>hadoop</module>
     </modules>
     <properties>
         <spark.version>2.1.1</spark.version>
@@ -49,6 +50,11 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
         </dependency>
     </dependencies>
     <build>
