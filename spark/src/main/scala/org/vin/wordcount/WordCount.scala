@@ -14,7 +14,7 @@ object WordCount {
 
     val words: RDD[String] = sc.textFile("./spark/src/main/resources/word.txt")
 
-    wordCount1(words)
+    wordCount2(words)
 
   }
 
@@ -25,8 +25,22 @@ object WordCount {
   }
 
   //TODO 如何将key value 对换位置？
-  def wordCount2(words:RDD[String]): Unit = {
-    words.flatMap(_.split("\n")).map((_, 1)).reduceByKey(_+_).map((k:String,v:Int)=>{(v,k)}).collect()
+  def wordCount2(words: RDD[String]): Unit = {
+//    val unit: RDD[(String, Int)] = words.flatMap(_.split("\n")).map((_, 1)).reduceByKey(_ + _)
+//    unit.map(w=>{(w._2,w._1)})
+
+    println(words.flatMap(_.split("\n")).map((_, 1)).reduceByKey(_ + _).map(w => {
+      (w._2, w._1)
+    }).sortByKey(false).collect())
+
+//    words.flatMap(_.split("\n")).map((_, 1)).reduceByKey(_ + _).map { case (k: String, v: Int) => {
+//      (v, k)
+//    }
+
+//      words.flatMap(_.split("\n")).map((_, 1)).reduceByKey(_+_).map(u => {
+//      (u._2, u._1)
+//    })
+
   }
 
 
