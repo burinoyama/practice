@@ -42,7 +42,6 @@ public class RemoveFragmentaryPac {
 	}
 
 	private static void cleanFragmentaryPck(final File mvnPath) {
-		final String[] list = mvnPath.list();
 		final File[] files = mvnPath.listFiles();
 		for (File subFile : files) {
 			if (Objects.isNull(subFile)) {
