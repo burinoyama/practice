@@ -1,0 +1,26 @@
+single1-4都会有一个问题
+就是面对反射和序列化时,不能做到真正的单例
+
+破坏方法:
+反射:
+
+Single single = Single.class.newInstance()
+
+序列化:
+ObjectOutputStream output = new ObjectOutputStream(new FileOutputStream(filename))
+file.writeObject(Single.getInstance())
+
+ObjectInputStream input = ObjectInputStream(new FileOutputStream(filename))
+Single single = (Single)input.readObject()
+
+
+
+补救方法:
+对于反射,并没有更好的办法,只能勉强添加一个全局变量布尔值 flag,判断对象是否被创建,
+但是flag也有可能,被反射创建,无法保证绝对安全.
+对于序列化, 可以在类中添加方法 readResole()方法,在java中继承Serializable和externalizable接口
+类中有 readResolve方法,会直接调用这个方法来获取实例,
+
+public Object readResolve() {
+    return single
+}
