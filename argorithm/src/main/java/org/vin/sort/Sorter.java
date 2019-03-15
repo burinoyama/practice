@@ -1,14 +1,14 @@
 package org.vin.sort;
 
-public interface Sorter {
+public interface Sorter<T extends Comparable> {
 
-	default void exch(Comparable[] a, int i, int j) {
-		Comparable t = a[i];
+	default void exch(T[] a, int i, int j) {
+		T t = a[i];
 		a[i] = a[j];
 		a[j] = t;
 	}
 
-	default void show(Comparable[] a) {
+	default void show(T[] a) {
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i] + " ");
 		}
@@ -17,11 +17,12 @@ public interface Sorter {
 
 	/**
 	 * positive sequence first parameter should bigger than second one
+	 *
 	 * @param a
 	 * @param b
 	 * @return
 	 */
-	default boolean less(Comparable a, Comparable b) {
+	default boolean less(T a, T b) {
 		return a.compareTo(b) < 0;
 	}
 
@@ -31,7 +32,7 @@ public interface Sorter {
 	 * @param a
 	 * @return
 	 */
-	default boolean isSorted(Comparable[] a) {
+	default boolean isSorted(T[] a) {
 		for (int i = 1; i < a.length; i++) {
 			if (less(a[i], a[i - 1])) {
 				return false;
@@ -40,7 +41,7 @@ public interface Sorter {
 		return true;
 	}
 
-	Comparable[] sort(Comparable[] a);
+	T[] sort(T[] a);
 
 
 }

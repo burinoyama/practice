@@ -7,6 +7,7 @@ public class SortPlayGround {
 	Integer[] a = {2, 3, 6, 1, 4, 7, 8};
 	Integer[] b = {-1, 3, 6, 1, 4, 7, 8};
 	Integer[] forPartialMerge = {1, 3, 5, 2, 4, 8};
+	Integer[] shortt = {3, 2, 5, 6, 1};
 
 
 	@Test
@@ -18,7 +19,7 @@ public class SortPlayGround {
 	@Test
 	public void runQucik() {
 		Quick quick = new Quick();
-		quick.show(quick.sort(b));
+		quick.show(quick.sort(shortt));
 	}
 
 
