@@ -1,9 +1,6 @@
 package org.vin.sort;
 
-import java.io.IOException;
-
 public class Chosen<T extends Comparable> implements Sorter {
-
 
 
 	public T[] betterChosenSort(T[] a) {

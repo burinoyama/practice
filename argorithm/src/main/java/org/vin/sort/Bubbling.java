@@ -1,20 +1,16 @@
 package org.vin.sort;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-
 public class Bubbling implements Sorter {
 	@Override
 	public Comparable[] sort(Comparable[] a) {
-		int len = a.length - 1;
+		int len = a.length;
 		for (int i = 0; i < len; i++) {
-
+			for (int j = 0; j < len - i - 1; j++) {
+				if (!less(a[j], a[j + 1])) {
+					exch(a, j, j + 1);
+				}
+			}
 		}
-
-
-		return null;
-
-
+		return a;
 	}
 }

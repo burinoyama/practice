@@ -41,6 +41,11 @@ public interface Sorter<T extends Comparable> {
 		return true;
 	}
 
+	/**
+	 * 默认降序 排序
+	 * @param a
+	 * @return
+	 */
 	T[] sort(T[] a);
 
 
