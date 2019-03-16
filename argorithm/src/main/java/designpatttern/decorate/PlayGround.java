@@ -6,8 +6,12 @@ public class PlayGround {
 
 	@Test
 	public void run() {
-		Component house = null;
 
-		house = new
+		Circle circle = new Circle();
+
+		RedShape redShape = new RedShape(circle);
+
+		redShape.getPrice();
+		redShape.setBorder(circle);
 	}
 }
