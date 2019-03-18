@@ -1,4 +1,4 @@
-package designpattern.proxy;
+package designpattern.proxy.jdk;
 
 public class FreeImpler implements Free {
 	@Override
