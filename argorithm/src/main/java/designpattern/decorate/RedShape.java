@@ -1,4 +1,4 @@
-package designpatttern.decorate;
+package designpattern.decorate;
 
 public class RedShape extends DecorateShape {
 

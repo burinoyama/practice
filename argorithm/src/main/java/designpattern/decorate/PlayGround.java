@@ -1,4 +1,4 @@
-package designpatttern.decorate;
+package designpattern.decorate;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package designpatttern.decorate;
+package designpattern.decorate;
 
 public abstract class DecorateShape implements Shape {
 
