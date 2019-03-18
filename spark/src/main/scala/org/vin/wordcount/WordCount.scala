@@ -6,23 +6,70 @@ import org.apache.spark.sql.SparkSession
 
 object WordCount {
 
+
   def main(args: Array[String]): Unit = {
 
     val conf = new SparkConf().setAppName("WORD_COUNT").setMaster("local[*]")
 
     val sc = new SparkContext(conf)
 
-    val words: RDD[String] = sc.textFile("./spark/src/main/resources/word.txt")
+    val words: RDD[String] = sc.textFile("./spark/src/main/resources/word")
 
-    wordCount2(words)
+    wc6(words)
 
   }
 
-  def wordCount1(words: RDD[String]): Unit = {
-    val ret = words.map(_.split(" ")).map((_, 1)).groupByKey()
 
-    println(ret)
+  def wc6 (words: RDD[String]): Unit = {
+    words.flatMap(_.split("\n")).map((_, 1)).combineByKey(x => x, (x:Int, y:Int) => x + y, (x:Int, y:Int) => x + y).collect.foreach(println)
   }
+
+  def wc5(words: RDD[String]): Unit = {
+    words.flatMap(_. split("\n")).map((_, 1)).aggregateByKey(0)(_+_, _+_).foreach(println)
+  }
+
+  def wc4(words: RDD[String]): Unit = {
+//    val unit: RDD[String] = words.flatMap(_.split("\n"))
+    words.flatMap(_.split("\n")).groupBy(x=>x).map(t=> (t._1, t._2.toList.size)).collect().foreach(println)
+  }
+
+  def wc3(words: RDD[String]): Unit = {
+    words.flatMap(_.split("\n")).map((_, 1)).foldByKey(0)(_ + _).collect().foreach(println)
+  }
+
+  def wc2(words: RDD[String]): Unit = {
+    words.flatMap(_.split("\n")).countByValue().foreach(println)
+  }
+
+  def wc1(words: RDD[String]): Unit = {
+    words.flatMap(_.split("\n")).map((_, 1)).reduceByKey(_+_).collect().foreach(println)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //TODO 如何将key value 对换位置？
   def wordCount2(words: RDD[String]): Unit = {
