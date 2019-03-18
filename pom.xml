@@ -15,6 +15,7 @@
         <module>zookeeper</module>
         <module>kafka</module>
         <module>hadoop</module>
+        <module>elasticsearch</module>
     </modules>
     <properties>
         <spark.version>2.1.1</spark.version>

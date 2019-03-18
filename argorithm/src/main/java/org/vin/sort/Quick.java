@@ -24,8 +24,8 @@ public class Quick implements Sorter {
 		int j = hi + 1;
 		Comparable v = a[lo];
 		while (true) {
-			while (less(a[++i], v)) {};
-			while (less(v, a[--j])) {};
+			while (less(a[++i], v)) {if (i == hi) {break;}};
+			while (less(v, a[--j])) {if (j == lo){break;}};
 			if (i >= j) {
 				break;
 			}
