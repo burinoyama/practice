@@ -23,7 +23,7 @@ object WordCount {
 
   def wc6(words: RDD[String]): Unit = {
 //    words.flatMap(_.split(SEP)).map((_, 1)).combineByKey(x => x, (x: Int, y: Int) => x + y, (x: Int, y: Int) => x + y).collect.foreach(println)
-    words.flatMap(_.split(SEP)).map((_, 1)).combineByKey(_, _, _).collect.foreach(println)
+//    words.flatMap(_.split(SEP)).map((_, 1)).combineByKey(_, _, _).collect.foreach(println)
   }
 
   def wc5(words: RDD[String]): Unit = {
