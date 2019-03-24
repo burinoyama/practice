@@ -23,10 +23,10 @@
             <version>4.12</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId></artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cglib</groupId>-->
+<!--            <artifactId></artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>
