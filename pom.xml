@@ -16,6 +16,9 @@
         <module>kafka</module>
         <module>hadoop</module>
         <module>elasticsearch</module>
+        <module>hive</module>
+        <module>weibo_friend</module>
+        <module>hbase</module>
     </modules>
     <properties>
         <spark.version>2.1.1</spark.version>

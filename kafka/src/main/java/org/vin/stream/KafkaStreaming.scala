@@ -45,7 +45,8 @@ object KafkaStreaming {
     val fromOffset: Map[TopicAndPartition, Long] = getOffset(cluster, group, topic)
 
     //创建流
-    val kafkaStream: InputDStream[String] = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder, String](ssc, kafkaParams, fromOffset, (mess: MessageAndMetadata[String, String]) => mess.message())
+    val kafkaStream: InputDStream[String] =
+      KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder, String](ssc, kafkaParams, fromOffset, (mess: MessageAndMetadata[String, String]) => mess.message())
 
     //转换逻辑
     kafkaStream.map((_, 1)).reduceByKey(_ + _).print()

@@ -7,6 +7,6 @@ public class JucTest {
 
 	@Test
 	public void run(){
-		new ConcurrentHashMap<>()
+		new ConcurrentHashMap<>();
 	}
 }
