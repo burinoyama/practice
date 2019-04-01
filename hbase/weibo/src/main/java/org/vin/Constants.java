@@ -3,7 +3,7 @@ package org.vin;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 
-class Constants {
+abstract class Constants {
 
 	//HBase配置信息
 	static final Configuration CONF = HBaseConfiguration.create();

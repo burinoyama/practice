@@ -1,12 +1,12 @@
 package org.vin.queue;
 
-public class MaxProrityQueue {
+public class MaxProrityQueue <T extends Comparable>{
 
-	private Comparable[] pq;
+	private T[] pq;
 	private int N = 0;
 
 	public MaxProrityQueue(int max) {
-		this.pq = new Comparable[max + 1];
+		this.pq = new T[max + 1];
 	}
 
 	public boolean isEmpty() {
@@ -17,7 +17,7 @@ public class MaxProrityQueue {
 		return this.N;
 	}
 
-	public boolean insert(Comparable v) {
+	public boolean insert(T v) {
 		this.pq[++N] = v;
 		try {
 			swim(this.N);
@@ -38,7 +38,7 @@ public class MaxProrityQueue {
 
 
 	private void exch(int i, int j) {
-		Comparable t = this.pq[i];
+		T t = this.pq[i];
 		this.pq[i] = this.pq[j];
 		this.pq[j] = t;
 	}
