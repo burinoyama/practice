@@ -16,18 +16,19 @@ object WordCount {
 
     val words: RDD[String] = sc.textFile("./spark/src/main/resources/word")
 
-    wc6(words)
+    wc3(words)
 
   }
 
 
   def wc6(words: RDD[String]): Unit = {
-//    words.flatMap(_.split(SEP)).map((_, 1)).combineByKey(x => x, (x: Int, y: Int) => x + y, (x: Int, y: Int) => x + y).collect.foreach(println)
+    words.flatMap(_.split(SEP)).map((_, 1)).combineByKey(x => x, (x: Int, y: Int) => x + y, (x: Int, y: Int) => x + y).collect.foreach(println)
 //    words.flatMap(_.split(SEP)).map((_, 1)).combineByKey(_, _, _).collect.foreach(println)
   }
 
   def wc5(words: RDD[String]): Unit = {
-    words.flatMap(_.split(SEP)).map((_, 1)).aggregateByKey(0)(_ + _, _ + _).foreach(println)
+    val unit: RDD[(String, Int)] = words.flatMap(_.split(SEP)).map((_, 1)).aggregateB yKey(0)(_ + _, _ + _)
+//    words.flatMap(_.split(SEP)).map((_, 1)).aggregateByKey(0)(_ + _, _ + _).foreach(println)
   }
 
   def wc4(words: RDD[String]): Unit = {
@@ -36,7 +37,9 @@ object WordCount {
   }
 
   def wc3(words: RDD[String]): Unit = {
-    words.flatMap(_.split(SEP)).map((_, 1)).foldByKey(0)(_ + _).collect().foreach(println)
+    val unit: RDD[(String, Int)] = words.flatMap(_.split(SEP)).map((_, 1)).foldByKey(0)(_ + _)
+//    words.flatMap(_.split(SEP)).map((_, 1)).foldByKey(0)(_ + _).collect().foreach(println)
+    words.flatMap(_.split(SEP)).map((_, 1)).countByValue()
   }
 
   def wc2(words: RDD[String]): Unit = {
