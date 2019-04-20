@@ -10,7 +10,7 @@ public class GenericArray<T> {
 //
 //		BiSearch[] biSearches = new BiSearch[10];
 
-		new ArrayList<T extends >()
+//		new ArrayList<T extends >()
 
 	}
 }
