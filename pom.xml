@@ -20,6 +20,8 @@
         <module>weibo_friend</module>
         <module>hbase</module>
         <module>kylin</module>
+        <module>elasticsearch</module>
+        <module>redscala</module>
     </modules>
     <properties>
         <spark.version>2.1.1</spark.version>
