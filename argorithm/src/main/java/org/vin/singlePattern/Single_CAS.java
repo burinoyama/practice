@@ -2,19 +2,19 @@ package org.vin.singlePattern;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-public class CasSingle {
+public class Single_CAS {
 
-    private static final AtomicReference<CasSingle> INSTANCE = new AtomicReference<>();
+    private static final AtomicReference<Single_CAS> INSTANCE = new AtomicReference<>();
 
-    private CasSingle(){}
+    private Single_CAS(){}
 
-    public static CasSingle getInstance() {
+    public static Single_CAS getInstance() {
         for (; ; ) {
-            CasSingle single = INSTANCE.get();
+            Single_CAS single = INSTANCE.get();
             if (single != null) {
                 return single;
             }
-            single = new CasSingle();
+            single = new Single_CAS();
             if (INSTANCE.compareAndSet(null, single)) {
                 return single;
             }

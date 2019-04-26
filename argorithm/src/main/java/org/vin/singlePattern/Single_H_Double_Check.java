@@ -4,7 +4,7 @@ package org.vin.singlePattern;
 /**
  * 懒汉式的升级版, 双重检验
  */
-public class Single3 {
+public class Single_H_Double_Check {
 
 	/**
 	 * volatile 的作用:
@@ -19,21 +19,21 @@ public class Single3 {
 	 * 2,使对象在线程能够立即对其他线程可见
 	 *
 	 */
-	private static volatile Single3 single;
+	private static volatile Single_H_Double_Check single;
 
-	private Single3() {
+	private Single_H_Double_Check() {
 	}
 
 	/**
 	 * 具体在这个方法中,如果single对象没有volatile关键字
-	 * 可能第一个进来的线程执行new Single3()的方法时,之后进来的线程仍然认为single时空的对象
+	 * 可能第一个进来的线程执行new Single_H_Double_Check()的方法时,之后进来的线程仍然认为single时空的对象
 	 * @return
 	 */
-	public static Single3 getInstance() {
+	public static Single_H_Double_Check getInstance() {
 		if (single == null) {
-			synchronized (Single3.class) {
+			synchronized (Single_H_Double_Check.class) {
 				if (single == null) {
-					single = new Single3();
+					single = new Single_H_Double_Check();
 				}
 			}
 		}
