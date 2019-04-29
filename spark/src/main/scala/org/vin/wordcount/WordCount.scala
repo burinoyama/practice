@@ -27,7 +27,7 @@ object WordCount {
   }
 
   def wc5(words: RDD[String]): Unit = {
-    val unit: RDD[(String, Int)] = words.flatMap(_.split(SEP)).map((_, 1)).aggregateB yKey(0)(_ + _, _ + _)
+    val unit: RDD[(String, Int)] = words.flatMap(_.split(SEP)).map((_, 1)).aggregateByKey(0)(_ + _, _ + _)
 //    words.flatMap(_.split(SEP)).map((_, 1)).aggregateByKey(0)(_ + _, _ + _).foreach(println)
   }
 

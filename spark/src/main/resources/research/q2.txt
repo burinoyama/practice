@@ -1,0 +1,23 @@
+Today, we welcome another fantastic team to the Elastic family.
+We are joining forces with Insight.io,
+creators of a modern source code search platform used by thousands of developers around the world.
+
+At Elastic, we live and breathe search,
+and we do so spending our days sifting through code,
+both in our own repositories or those of other open source projects.
+Needless to say,
+we understand and appreciate the challenges arising in this modern era of code with deciphering context at scale.
+Insight.io addressed these challenges by developing a semantic search and code intelligence solution,
+that is both elegant and powerful. It also leverages Elasticsearch for many core features :)
+
+When you think about it,
+a growing portion of our collective work product today is in the form of software code, across many sectors:
+health, financial, government, media, and more.
+Technologies like code search offer a unique lens into the value that exists beyond the objects, named functions,
+variables and constants that make up your codebase.
+It helps you make sense of the business logic that is embedded deeply in your applications.
+Programs are the core intellectual property of many organizations today,
+and enabling our users to navigate and understand that information is an exciting opportunity for us.
+We aim to make code search an indispensable tool for anyone:
+from new hires trying to understand their new workspace to the most senior developers,
+speeding up access to information and reducing work duplication.
