@@ -1,0 +1,33 @@
+Quora has always been “restricted” in Chinese internet.
+
+First of all, if you are not familiar with the GFW, here are some perspectives, from a veteran Chinese internet user: GFW is actually not just a firewall invented by the Chinese Government. It is a series of measures to block and disrupt foreign data traffic. The Technical Details are not disclosed to the public, but the end result: many foreign sites are not accessible.
+
+Things got complicated in the *Cloud Service Era*, as it has become a thriving trend for many internet companies.
+
+It’s a game changer. What it is, is essentially the abolish of individual physical servers, maintained and providing services for each company (which is costly and risky to maintain); instead, they out-source these services in specialized “cloud companies”.
+
+And analogy would be, one day you don’t need to own a car anymore, you can always take a cab, and a cab will always be there when you need it. It’s cheaper, more convenient, and it shifts the risk of having a car crash to the cab company from yourself.
+
+Therefore, it posted the Chinese government a problem: in a cloud service, it is entirely possible, that a academic site — not sinister, not porn, not subversive, completely innocent, shares the cloud server with epochtimes.
+
+Banning epochtimes means banning the innocent sites. Collateral damage.
+
+To make things worse, if a site itself is not banned by GFW, but some of its services is likely to be routed from a cloud service, where the sites from the ban list are also located. It results in a rather awkward result: you can use the site, but some of its services are slow / unavailable to you.
+
+Such as — Quora.
+
+Now, I had been using Quora only since March, 2018. But since back then, I noticed many things about it.
+
+Quora notification for Android OS doesn’t work.
+Page refresh is slow.
+There is huge discrepancy from the article in my feed and my profile page, i.e. if I made a mistake and I edited my answer, submitted, and in effect, my profile page will still show the erroneous version. However, if I search the feed, it will be correct.
+Some comment notifications never reaches me.
+All of the above can be fixed, with a VPN. (Before August).
+
+In August, I don’t think of what happens is a “Ban”, but a more severe case of “Services not reaching to China internet”. There are several explanations for this:
+
+CCP banned more sites which Quora services are sharing cloud service.
+Quora started to abolish more obsolete servers, and started to route more of its services on cloud services (which saves money and make things faster, for users outside of China).
+People started to talk about the “Winnie the Pooh” meme on Quora.
+Hold on, let me get the door, my package delivery has arrived. Will be back.
+
